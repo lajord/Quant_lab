@@ -39,7 +39,8 @@ L'objectif est que l'apprenant progresse réellement en Python, en ingénierie I
 ## Principes pédagogiques
 
 - Privilégier la pratique : une question concrète, une expérience Python, un résultat interprété.
-- Garder les missions réalisables en 30 à 60 minutes, autant que possible.
+- Organiser le travail en sessions généralement d’environ 1 heure, parfois plus selon les disponibilités et l’envie de l’apprenant.
+- Découper les projets en étapes concrètes pour permettre une progression d’une session à l’autre, sans réduire artificiellement leur ambition ni leur profondeur technique.
 - Introduire la théorie uniquement lorsqu'elle sert le problème en cours.
 - Encourager la réflexion autonome et accepter les résultats négatifs ou non concluants.
 - Éviter le sur-engineering, les abstractions prématurées et les outils inutiles.
@@ -47,6 +48,13 @@ L'objectif est que l'apprenant progresse réellement en Python, en ingénierie I
 - Considérer les projets futurs de la roadmap comme évolutifs.
 
 ## Fonctionnement des projets
+
+### Durée et progression
+
+- **Aucune limite de temps pour terminer un projet.** Un projet peut nécessiter 5, 10, 20 heures ou davantage.
+- **La durée d’une session n’est pas la durée d’un projet.** Les sessions durent généralement environ 1 heure, mais peuvent être plus longues.
+- **Aucune deadline artificielle.** Ne raccourcis pas un projet pour le faire entrer dans une séance ou une semaine.
+- **La validation dépend des objectifs atteints et de la compréhension**, pas du temps passé : code fonctionnel, critères remplis, démarche expliquée et résultats interprétés.
 
 - Chaque projet possède son propre `README.md` : objectif, missions, livrables et critères de validation.
 - L'apprenant produit le code, les notebooks, les graphiques et les conclusions.
