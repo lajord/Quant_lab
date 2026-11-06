@@ -121,23 +121,17 @@ Aucun autre fichier n'est obligatoire. Ne crée pas de modules, de tests complex
 
 Ne consulte pas tout avant de commencer. Utilise ces références uniquement lorsqu'elles deviennent utiles pour une mission.
 
-## 7. Journal de recherche (à compléter par l'apprenant)
+## 7. Journal de recherche 
 
-### Hypothèses / attentes initiales
+J'ai pu faire différent test sur le SPY
+Notament sur les rendements, la volat des rendements, l'évolution d'un capital sur la période 2015-2026 en mode Buy and hold
 
-_À écrire avant ou pendant les premières analyses._
+Ce que j'ai pu apprendre / re découvrir c'est les closes ajusté, le fait que on distribue les dividendes des actions ca affecte le prix et donc
+pour effiter d'avoir par exempel un -5% d'afficher alor que en réalité tout est normal e, on ajuste les close.. ce qui fait que y'a plus de répercution des
+dividendes sur les closes tout est ok
 
-### Résultats marquants
-
-_À renseigner après avoir exécuté les expériences._
-
-### Limites et points à vérifier
-
-_À compléter à la fin._
-
-### Question à emporter vers P02
-
-_À compléter à la fin._
+Ce que j'ai bien aimé voir aussi c'est la corrélation positive entre drawdown et volatilité sur la période observé, j'ai utilisé une corélation de Pearson et la corrélation est de
+0.71 ce qui est intéréssant, au final on peut conclure que les période de forte volatilité SONT souvent associer a des périodes de baisse car panique 
 
 ---
 
