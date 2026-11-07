@@ -133,6 +133,20 @@ dividendes sur les closes tout est ok
 Ce que j'ai bien aimé voir aussi c'est la corrélation positive entre drawdown et volatilité sur la période observé, j'ai utilisé une corélation de Pearson et la corrélation est de
 0.71 ce qui est intéréssant, au final on peut conclure que les période de forte volatilité SONT souvent associer a des périodes de baisse car panique 
 
+Les différentes fonctions que j'ai pu revoir 
+
+- `pct_change()` — Calcule le rendement d’une séance par rapport à la précédente.
+- `shift(1)` — Décale les valeurs d’une ligne pour comparer chaque séance à la précédente. => Ici sur un dataframe
+- `.loc` et `.iloc` — Sélectionnent par étiquette (une date, par exemple) ou par position (`-1` pour la dernière ligne).
+- `isna()` et `dropna()` — Repèrent les valeurs manquantes ou retirent les lignes qui en contiennent.
+- `describe()` — Résume une série avec la moyenne, l’écart-type, les quartiles et les extrêmes.
+- `rolling(21).std()` — Calcule la volatilité glissante sur 21 séances.
+- `cumprod()` — Multiplie les facteurs de rendement au fil du temps pour construire la courbe de capital.
+- `cummax()` — Donne le sommet atteint à chaque date, nécessaire pour calculer le drawdown.
+- `max()` et `idxmax()` — Donnent la valeur du maximum et la date où il est atteint.
+- `corr()` — Mesure la corrélation entre deux séries, comme le drawdown et la volatilité.
+- `plot()` et `hist()` — Tracent une courbe dans le temps ou un histogramme pour voir la distribution.
+
 ---
 
 **Règle Quant Lab :** l'IA peut clarifier la mission, orienter vers la documentation, poser des questions et relire ton travail. **Elle ne génère ni ne corrige le code à ta place.**
