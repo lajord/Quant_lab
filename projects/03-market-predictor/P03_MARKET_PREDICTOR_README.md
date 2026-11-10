@@ -96,17 +96,7 @@ Dans P02, tu comparais des fréquences de hausse selon le signe du mois précéd
 
 ## 7. Journal de recherche
 
-### Hypothèse initiale
-
-_À compléter avant de regarder les scores de test._
-
-### Résultats et erreurs des modèles
-
-_À compléter après l'évaluation._
-
-### Limites et question à emporter vers P04
-
-_À compléter à la fin._
+Jordi : J'ai tester des approches simple dans un premier temps poru revoir les basses, l'objectif c'etait de voir si des approches simpel de prediction pouvais donner des choses cool, j'ai utiliser trois features, les rendements de la semaines, rendements des 4 derniers semaines cumulmé et la volat glissante des rendements des 4 dernieres semaines. J'ai utliser une regression logistique , Random forest et une approche naive qui consiste a buy chaque début de semaine. La questioin c'était de savoir si faire des petits models de prediction avec ces trois features aller me permettre de faire mieux que l'approche naive qui est de buy en début de semaine. In fine la regression logistique de change rien car elle nosu dis de buy chaque début de semaine CEPENDANT la random forest ce qui est intéréssant c'est que ici a certain moment elle nous dis de pas acheter, au final en creusant un peu elle nous permet a certain moment d'esquiver des semaiens down mais elle nous fait rater beaucoup de hausse donc avec des faux négatif donc en gros elle nous dis que ca baisse alors que non.. C'est intéréssant de voir que au final la random forest a mis son nez la dedans et en terme de résultat de prediction, la random forest predit moins souvent ducoup la bonne réponse qui est de savoir si la semaines suivante aura un rendement positif ou négatif
 
 ---
 
