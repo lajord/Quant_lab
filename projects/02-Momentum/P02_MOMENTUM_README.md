@@ -2,7 +2,7 @@
 
 **Quant Lab · Projet 02 · Data & Scientific Foundations**
 
-> **Statut** — À commencer  
+> **Statut** — Terminé  
 > **Durée** — Libre. La roadmap donne un repère de 3 à 4 séances.  
 > **Prérequis** — Savoir récupérer les clôtures ajustées et calculer un rendement simple, comme dans P01.
 

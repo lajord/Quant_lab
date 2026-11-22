@@ -2,7 +2,7 @@
 
 **Quant Lab · Projet 01 · Data & Scientific Foundations**
 
-> **Statut :** à commencer  
+> **Statut :** terminé  
 > **Durée :** libre. Une séance dure souvent environ une heure, mais ce projet peut prendre autant d'heures que nécessaire.  
 > **Prérequis :** bases de Python. Les notions statistiques seront revues au moment où elles seront utiles.
 

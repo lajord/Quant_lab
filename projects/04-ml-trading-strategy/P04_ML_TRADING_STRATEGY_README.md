@@ -2,7 +2,7 @@
 
 **Quant Lab · Projet 04 · Machine Learning for Trading**
 
-> **Statut** — À commencer  
+> **Statut** — Terminé  
 > **Durée** — Libre. La roadmap donne un repère de 4 à 6 séances.  
 > **Prérequis** — Avoir les prédictions hors échantillon de P03 et savoir calculer une courbe de capital et son drawdown, comme dans P01.
 

@@ -1,8 +1,8 @@
 # Quant Lab — Objectifs, pédagogie & roadmap
 
-> **Version 1.0 — Novembre 2026**  
+> **Version 1.1 — Novembre 2026**  
 > Un laboratoire personnel pour progresser en ingénierie IA et en Data Science **en construisant des stratégies de trading algorithmique**.  
-> **Statut :** projets P01 à P04 définis ; la suite reste volontairement évolutive.
+> **Statut :** Phase 1 et Phase 2 terminées (P01 à P04) ; la suite reste volontairement évolutive.
 
 ---
 
@@ -11,9 +11,9 @@
 ### Mon profil
 
 - Je suis **ingénieur IA / Data Analyst**, avec des bases en Python, statistiques, mathématiques et Machine Learning que je souhaite **réactiver et approfondir**.
-- J'ai terminé mes études et je développe actuellement un **SaaS**, qui reste ma priorité.
+- J'ai terminé mes études.
 - J'aime le trading algorithmique comme **terrain d'expérimentation technique et scientifique**.
-- Je dispose de **30 à 60 minutes maximum par jour** pour cette activité. Je veux que ce soit motivant, ludique et compatible avec mon travail principal.
+- J'ai du temps à consacrer à cette activité, **sans contrainte de durée**. Je veux que ce soit motivant et ludique.
 
 ### Mon objectif
 
@@ -26,7 +26,7 @@
 3. Apprendre à distinguer **un modèle prédictif intéressant** d'une **stratégie réellement robuste après coûts**.
 4. Développer progressivement mes **propres outils Python** lorsque mes expériences les rendent utiles.
 
-**Ce que ce projet n'est pas :** un second SaaS, une formation de trader discrétionnaire, un programme académique théorique, une course à la rentabilité immédiate ou un système de trading réel dès le départ. On commence avec des données historiques et des simulations.
+**Ce que ce projet n'est pas :** une formation de trader discrétionnaire, un programme académique théorique, une course à la rentabilité immédiate ou un système de trading réel dès le départ. On commence avec des données historiques et des simulations.
 
 ## 2. Philosophie pédagogique
 
@@ -53,11 +53,11 @@ Docker, cloud, orchestration, dashboards, APIs de brokers, exécution réelle, H
 
 ## 3. Roadmap — première version
 
-Les estimations sont données en **séances de 30 à 60 minutes**, et non en deadlines. La priorité est de comprendre et terminer proprement, sans pression liée au calendrier.
+**Le temps est illimité** : aucune estimation de durée ni deadline. La priorité est de comprendre et terminer proprement, sans pression liée au calendrier.
 
-### Phase 1 — Data & Scientific Foundations
+### Phase 1 — Data & Scientific Foundations · **Terminée**
 
-#### P01 — Market X-Ray · **Défini** · ~2–3 séances
+#### P01 — Market X-Ray · **Terminé**
 
 **Question :** Que peut-on apprendre sur un marché en analysant ses prix historiques ?
 
@@ -66,7 +66,7 @@ Les estimations sont données en **séances de 30 à 60 minutes**, et non en dea
 - **Livrable :** un notebook reproductible, environ 3 graphiques interprétés, une courte conclusion.
 - **Prépare P02 :** réutilisation des données préparées et des calculs de rendements.
 
-#### P02 — Is Momentum Real? · **Défini** · ~3–4 séances
+#### P02 — Is Momentum Real? · **Terminé**
 
 **Question :** Les performances passées contiennent-elles de l'information sur les rendements futurs ?
 
@@ -75,9 +75,9 @@ Les estimations sont données en **séances de 30 à 60 minutes**, et non en dea
 - **Livrable :** une mini-étude quantitative avec graphiques, hypothèse et conclusion (positive, négative ou non concluante).
 - **Prépare P03 :** les indicateurs deviennent des features ML.
 
-### Phase 2 — Machine Learning for Trading
+### Phase 2 — Machine Learning for Trading · **Terminée**
 
-#### P03 — My First Market Predictor · **Défini** · ~4–6 séances
+#### P03 — My First Market Predictor · **Terminé**
 
 **Question :** Peut-on prédire la direction des rendements de la semaine suivante à partir d'informations passées ?
 
@@ -88,7 +88,7 @@ Les estimations sont données en **séances de 30 à 60 minutes**, et non en dea
 
 **Point de vigilance dès ce projet :** aucune fuite de données futures dans les features ou le prétraitement ; les prédictions utilisées ensuite doivent être véritablement hors échantillon (séparation chronologique, puis protocole walk-forward si nécessaire).
 
-#### P04 — From ML Predictions to Strategy · **Défini** · ~4–6 séances
+#### P04 — From ML Predictions to Strategy · **Terminé**
 
 **Question :** Des prédictions ML peuvent-elles se traduire par une stratégie pertinente après frais ?
 
@@ -152,7 +152,7 @@ Chaque projet a **un objectif unique**, divisé en **3 à 6 missions courtes**. 
 1. **Question / mission** — Ce qu'on essaie de découvrir ou de construire.
 2. **Résultat attendu** — Graphique, modèle, stratégie, métriques, etc.
 3. **Contraintes** — Données, horizon, règles pour éviter les biais, outils autorisés.
-4. **Missions** — Étapes réalisables chacune en une séance environ ; ajustables si besoin.
+4. **Missions** — Étapes concrètes, de taille libre ; ajustables si besoin.
 5. **Notions utiles** — Quelques concepts à (re)découvrir, avec ressources ciblées au moment nécessaire.
 6. **Critères de validation** — Vérifications objectives + interprétation scientifique.
 
@@ -164,15 +164,15 @@ Chaque projet a **un objectif unique**, divisé en **3 à 6 missions courtes**. 
 
 Un projet n'est **pas validé** simplement parce qu'il produit un joli graphique. On vérifie la logique du code, la chronologie des informations, la comparaison à une baseline quand elle est pertinente et la justesse de la conclusion. Inversement, une expérience qui ne produit aucun avantage statistique ou financier peut être **validée** si elle est rigoureuse.
 
-## 6. Rythme quotidien
+## 6. Rythme
 
-**Objectif :** une activité agréable et régulière, sans empiéter sur le SaaS.
+**Objectif :** une activité agréable et régulière. Le temps est illimité : la durée d'une séance et d'un projet n'est pas une contrainte.
 
-- **5 minutes :** relire l'objectif de la mission du jour.
-- **20–45 minutes :** coder, expérimenter, chercher, déboguer.
-- **5–10 minutes :** noter ce qui a été observé et le prochain petit pas.
+- Relire l'objectif de la mission en cours.
+- Coder, expérimenter, chercher, déboguer.
+- Noter ce qui a été observé et le prochain pas.
 
-Ce sont des repères, pas un rituel strict. Une séance de 25 minutes est utile ; une journée manquée n'appelle pas de rattrapage.
+Ce sont des repères, pas un rituel strict ; une journée manquée n'appelle pas de rattrapage.
 
 ### Notre règle d'interaction
 

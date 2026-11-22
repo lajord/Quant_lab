@@ -2,7 +2,7 @@
 
 **Quant Lab · Projet 03 · Machine Learning for Trading**
 
-> **Statut** — À commencer  
+> **Statut** — Terminé  
 > **Durée** — Libre. La roadmap donne un repère de 4 à 6 séances.  
 > **Prérequis** — Savoir calculer un rendement et aligner un signal avec le rendement de la période suivante, comme dans P02.
 
