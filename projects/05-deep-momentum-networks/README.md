@@ -14,7 +14,7 @@ Le projet se déroule en trois temps :
 
 1. **Reproduire** le paper avec les mêmes données et le même protocole, puis comparer tes résultats aux siens sur 1995–2015.
 2. **Éprouver** la méthode hors de la période étudiée par les auteurs, de 2016 à aujourd'hui.
-3. **Améliorer** le modèle sur un point précis, mesuré avec le même protocole.
+3. **Aller plus loin** que le paper : tester, une à une, des hypothèses qu'il n'explore pas (attention, ruptures de tendance, perte calculée sur le portefeuille).
 
 ## 2. D'où vient ce projet
 
@@ -75,15 +75,35 @@ Applique exactement le même protocole de 2016 à aujourd'hui : krach du Covid e
 
 **Terminé quand** tu peux répondre, chiffres à l'appui : l'avantage du modèle survit-il à sa publication ?
 
-### Objectif 6 — Ton amélioration
+### Objectif 6 — Aller plus loin que le paper
 
-Choisis **une** piste à partir de ce que les objectifs 4 et 5 ont révélé. Par exemple : la détection de changement de régime (Wood et al., 2021), l'attention (Momentum Transformer, 2022), ou une idée à toi. Mesure-la avec le même protocole, en ne changeant qu'un seul élément à la fois.
+Le paper s'arrête au LSTM et à l'année 2015. Teste des hypothèses qu'il n'explore pas, **une à la fois**, contre ton DMN reproduit : mêmes données, même protocole, plusieurs graines, résultats avant et après frais, sur 1995–2015 et après 2015. L'ordre est libre ; H1 est le point de départ naturel.
 
-**Terminé quand** tu sais si l'amélioration apporte quelque chose, et pourquoi.
+**H1 — L'attention fait mieux que la mémoire du LSTM.** Le LSTM résume le passé dans une mémoire qui s'efface peu à peu. L'attention relie chaque jour directement à tous les jours passés : elle pourrait mieux capter les tendances longues et les changements de régime.
+
+- *Test* : remplace le LSTM par un Transformer, sans rien changer d'autre. Si besoin, essaie ensuite un hybride LSTM + attention, comme le Momentum Transformer.
+- *Point critique* : si le modèle sort une position pour chaque jour de la séquence, l'attention doit être **causale** : un jour ne voit jamais les jours suivants.
+- *À surveiller* : le surapprentissage (peu de données, beaucoup de bruit) et les jours passés sur lesquels l'attention se concentre.
+
+**H2 — Détecter les ruptures de tendance limite les pertes aux retournements.** Le trend-following perd surtout quand une tendance se retourne. Un signal de rupture en entrée pourrait aider le réseau à réduire ou inverser sa position plus vite.
+
+- *Test* : ajoute au DMN des features de détection de rupture (*changepoint detection*), sans rien changer d'autre.
+- *À mesurer* : tes pires drawdowns (H2 les réduit-elle ?) et le Sharpe après 2015.
+
+**H3 — Une perte calculée sur le portefeuille apprend la diversification.** La perte Sharpe du paper mélange tous les couples (actif, jour) : elle ignore les corrélations entre actifs. Un Sharpe calculé sur la série quotidienne du portefeuille pourrait pousser le réseau à éviter les paris corrélés.
+
+- *Test* : change uniquement la perte.
+- *À mesurer* : le Sharpe et le drawdown du portefeuille, et les corrélations entre positions.
+
+**H4 (facultative, avancée) — S'adapter vite à un nouveau régime.** Le modèle s'appuie sur des épisodes passés similaires pour s'adapter (*few-shot learning*, X-Trend). À garder pour la fin.
+
+Combine plusieurs hypothèses seulement après avoir mesuré l'effet de chacune séparément.
+
+**Terminé quand** chaque hypothèse testée a une réponse argumentée (elle aide, elle n'aide pas, ou c'est inconclusif) et une explication du pourquoi.
 
 ### Objectif 7 — Le rapport
 
-Rédige un rapport court, au format d'un mini-paper : question, méthode, réplication, test post-publication, amélioration et limites. Ce README résume ensuite les résultats clés avec les graphiques principaux.
+Rédige un rapport court, au format d'un mini-paper : question, méthode, réplication, test post-publication, hypothèses testées au-delà du paper et limites. Ce README résume ensuite les résultats clés avec les graphiques principaux.
 
 **Terminé quand** un recruteur comprend en 5 minutes ce que tu as fait, ce que tu as trouvé et pourquoi c'est crédible.
 
@@ -113,7 +133,7 @@ Le projet est validé quand :
 - les références et le modèle tournent de bout en bout, sans fuite d'information ;
 - chaque écart avec le paper est expliqué, ou honnêtement signalé comme inexpliqué ;
 - le test post-publication est rapporté tel qu'il sort, favorable ou non ;
-- l'amélioration est mesurée contre le modèle reproduit, avec le même protocole ;
+- chaque hypothèse de l'objectif 6 est mesurée contre le DMN reproduit, avec le même protocole, et rapportée telle qu'elle sort ;
 - le rapport permet de refaire l'expérience.
 
 Un modèle qui ne bat pas les références peut faire un excellent projet si la démarche est rigoureuse.
@@ -132,17 +152,19 @@ Un modèle qui ne bat pas les références peut faire un excellent projet si la 
 
 - [Baz et al. (2015) — Dissecting Investment Strategies in the Cross Section and Time Series](https://cmegroup.com/education/alternative-investment-resource-center/research/dissecting-investment-strategies.html) : le paper de 2019 reprend ses formules MACD dans sa section III-A (équations 4 à 8).
 
-**Pistes pour l'objectif 6** — le résumé suffit pour l'instant ; lecture complète seulement au moment de choisir ton amélioration.
+**Pour l'objectif 6** — le résumé suffit pour l'instant ; lecture complète au moment de tester l'hypothèse correspondante.
 
-- [Wood, Roberts, Zohren (2021) — Slow Momentum with Fast Reversion](https://arxiv.org/abs/2105.13727)
-- [Wood et al. (2022) — Trading with the Momentum Transformer](https://arxiv.org/abs/2112.08534)
-- [Wood et al. (2024) — X-Trend : few-shot learning pour le trend-following](https://arxiv.org/abs/2310.10500)
-- [DeePM (2026) — Regime-Robust Deep Learning for Systematic Macro Portfolio Management](https://arxiv.org/abs/2601.05975)
+- **H1** — [Wood et al. (2022) — Trading with the Momentum Transformer](https://arxiv.org/abs/2112.08534) : un hybride LSTM + attention, par la même équipe que le DMN.
+- **H1** — [Vaswani et al. (2017) — Attention Is All You Need](https://arxiv.org/abs/1706.03762) : l'article fondateur du Transformer. [The Illustrated Transformer](https://jalammar.github.io/illustrated-transformer/) en donne une explication visuelle.
+- **H2** — [Wood, Roberts, Zohren (2021) — Slow Momentum with Fast Reversion](https://arxiv.org/abs/2105.13727) : un module de détection de ruptures ajouté au DMN.
+- **H3** — [DeePM (2026) — Regime-Robust Deep Learning for Systematic Macro Portfolio Management](https://arxiv.org/abs/2601.05975) : un apprentissage au niveau du portefeuille.
+- **H4** — [Wood et al. (2024) — X-Trend : few-shot learning pour le trend-following](https://arxiv.org/abs/2310.10500)
 
 **Outils**
 
 - [PyTorch — `nn.LSTM`](https://pytorch.org/docs/stable/generated/torch.nn.LSTM.html)
 - [PyTorch — différentiation automatique](https://pytorch.org/tutorials/beginner/basics/autogradqs_tutorial.html) : utile pour comprendre comment une perte Sharpe se dérive.
+- [PyTorch — `nn.TransformerEncoder`](https://pytorch.org/docs/stable/generated/torch.nn.TransformerEncoder.html) : pour H1 ; regarde comment lui passer un masque causal.
 
 **Code de référence des auteurs** — à ouvrir seulement après avoir obtenu tes propres résultats, pour comparer :
 
@@ -162,9 +184,9 @@ _À compléter après l'objectif 4._
 
 _À compléter après l'objectif 5._
 
-### Amélioration choisie et résultat
+### Au-delà du paper : hypothèses testées et résultats
 
-_À compléter après l'objectif 6._
+_À compléter pendant l'objectif 6, une entrée par hypothèse._
 
 ### Limites et suite
 
