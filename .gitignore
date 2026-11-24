@@ -1,1 +1,8 @@
 data/
+
+# Fichiers personnels, gardés en local seulement
+/CLAUDE.md
+/AGENTS.md
+/QUANT_LAB_ROADMAP.md
+projects/05-deep-momentum-networks/note.md
+projects/05-deep-momentum-networks/video.md
